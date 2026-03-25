@@ -1,80 +1,91 @@
-DevOps Accelerator: End-to-End Cloud-Native Project
+# DevOps Accelerator: End-to-End Cloud-Native Project
 
 A fully integrated DevOps project simulating real-world CI/CD workflows, infrastructure provisioning, monitoring, and automation — built for aspiring DevOps engineers.
 
-Project Overview
+---
 
-This DevOps Accelerator enables users to
+## 📌 Project Overview
 
-Upload input files through a frontend hosted on S3 + CloudFront
-Automatically trigger processing via Lambda and S3 events
-Use pre-signed URLs for secure uploads
-Deploy and manage infrastructure using Terraform
-Automate pipelines via GitHub Actions
-Monitor health and logs via CloudWatch
-The flow (How It Works)
-User visits frontend site through browser.
-Navigates through all the sections.
-Makes the payment and uploads the screenshot / .pdf file.
-Uploaded input file is converted to pre-signed URL and placed in S3 bucket.
-S3 event triggers → Lambda execution.
-Lambda processes the file and logs the result in CloudWatch.
-SNS alert sent to the owner after successful processing.
-Tech Stack
-Layer	Tools & Services
-Frontend	HTML/CSS + S3 + CloudFront
-Backend (Event)	AWS Lambda (Python)
-Infrastructure	Terraform (modular setup & remote backend)
-CI/CD	GitHub Actions (Workflows & Triggers)
-Monitoring	CloudWatch (Logs, Alarms, Dashboard)
-Notification	SNS (Email alerts for file uploads)
-Security	IAM Roles, Policies, Bucket Permissions
-What's covered in this DevOps Accelerator Platform
-Infrastructure Auto-Provisioning with Terraform
-Automated infra management using Terraform.
+This DevOps Accelerator enables users to:
 
-Remote backend configured with S3 for state file and DynamoDB for state locking.
+- Upload input files through a frontend hosted on S3 + CloudFront  
+- Automatically trigger processing via Lambda and S3 events  
+- Use pre-signed URLs for secure uploads  
+- Deploy and manage infrastructure using Terraform  
+- Automate pipelines via GitHub Actions  
+- Monitor health and logs via CloudWatch  
 
-End-to-End CI/CD Automation with GitHub Actions
-Fully automated workflows for:
+---
 
-Frontend deployment (S3 + CloudFront)
+## ⚙️ The Flow (How It Works)
 
-Backend Lambda packaging & deployment
+1. User visits frontend site through browser  
+2. Navigates through all sections  
+3. Makes the payment and uploads screenshot / PDF file  
+4. File is converted into pre-signed URL and stored in S3  
+5. S3 event triggers AWS Lambda  
+6. Lambda processes the file and logs in CloudWatch  
+7. SNS sends alert after successful processing  
 
-Terraform infrastructure provisioning
+---
 
-Separate pipelines for each component.
+## 🚀 Tech Stack
 
-Cloud-Native Hosting (No Server Management Needed)
-Static frontend hosted on S3 + CloudFront CDN for global delivery.
+| Layer | Tools & Services |
+|------|----------------|
+| Frontend | HTML/CSS + S3 + CloudFront |
+| Backend | AWS Lambda (Python) |
+| Infrastructure | Terraform |
+| CI/CD | GitHub Actions |
+| Monitoring | CloudWatch |
+| Notification | SNS |
+| Security | IAM Roles, Policies |
 
-Backend logic served through AWS Lambda using REST APIs.
+---
 
-Everything is serverless-first, cost-efficient, and easily scalable.
+## 🔥 Key Features
 
-Secure File Upload Workflow Using Pre-Signed URLs
-Users securely upload files using pre-signed S3 URLs.
+### ✅ Infrastructure Auto-Provisioning
+- Automated infrastructure setup using Terraform  
+- Remote backend with S3 (state file) and DynamoDB (state locking)  
 
-Upload triggers processing Lambda without exposing S3 directly.
+### ✅ CI/CD Automation
+- Fully automated pipelines using GitHub Actions  
+- Separate workflows for:
+  - Frontend deployment  
+  - Backend (Lambda) deployment  
+  - Infrastructure provisioning  
 
-Automated Monitoring & Alerting
-AWS CloudWatch monitors backend Lambda executions.
+### ✅ Cloud-Native Architecture
+- Frontend hosted on S3 + CloudFront  
+- Backend using AWS Lambda (serverless)  
+- Cost-efficient and highly scalable  
 
-AWS SNS notifies on every successful file processing event.
+### ✅ Secure File Upload
+- Pre-signed S3 URLs for secure uploads  
+- No direct exposure of S3 bucket  
 
-Auto-alerts configured for error detection and operational visibility.
+### ✅ Monitoring & Alerts
+- CloudWatch for logs and monitoring  
+- SNS for email notifications  
 
-Modular Gigs to Extend the Platform
-Easily extendable with plug-and-play gig modules like:
+### ✅ Modular & Scalable Design
+- Easily extendable with new modules (like QA Bot, Project Generator)  
+- Clean and organized folder structure  
 
-Project Generator
+---
 
-QA Bot
+## 📂 Project Structure
+**frontend/
+backend/
+infra/terraform/
+.github/workflows/
+README.md******
+---
+****
+git add .
+git commit -m "Updated README"
+git push
 
-New gigs can be added without disrupting the core pipeline.
-
-Organized Folder Structure for Scalability
-Clean, modular repo layout separating infra, frontend, backend, and workflows.
-
-Easy to replicate in other AWS accounts.
+## 👨‍💻 Author
+**Kajal Pandey**
