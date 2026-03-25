@@ -1,7 +1,9 @@
 DevOps Accelerator: End-to-End Cloud-Native Project
+
 A fully integrated DevOps project simulating real-world CI/CD workflows, infrastructure provisioning, monitoring, and automation — built for aspiring DevOps engineers.
 
 Project Overview
+
 This DevOps Accelerator enables users to
 
 Upload input files through a frontend hosted on S3 + CloudFront
